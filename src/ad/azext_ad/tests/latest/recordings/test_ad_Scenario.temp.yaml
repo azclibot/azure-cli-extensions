@@ -1,0 +1,1296 @@
+interactions:
+- request:
+    body: '{"location": "eastus"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '22'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - --name --resource-group
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"aadds-nsg-test\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test\",\r\n
+        \ \"etag\": \"W/\\\"b61d4e03-0588-4fac-8982-2b2e9ea12445\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/networkSecurityGroups\",\r\n  \"location\": \"eastus\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Updating\",\r\n    \"resourceGuid\":
+        \"8ed378cb-f7a2-4b4f-9225-210afd103024\",\r\n    \"securityRules\": [],\r\n
+        \   \"defaultSecurityRules\": [\r\n      {\r\n        \"name\": \"AllowVnetInBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowVnetInBound\",\r\n
+        \       \"etag\": \"W/\\\"b61d4e03-0588-4fac-8982-2b2e9ea12445\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"description\": \"Allow inbound traffic from all VMs in VNET\",\r\n
+        \         \"protocol\": \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n
+        \         \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"VirtualNetwork\",\r\n          \"destinationAddressPrefix\": \"VirtualNetwork\",\r\n
+        \         \"access\": \"Allow\",\r\n          \"priority\": 65000,\r\n          \"direction\":
+        \"Inbound\",\r\n          \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"AllowAzureLoadBalancerInBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowAzureLoadBalancerInBound\",\r\n
+        \       \"etag\": \"W/\\\"b61d4e03-0588-4fac-8982-2b2e9ea12445\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"description\": \"Allow inbound traffic from azure load balancer\",\r\n
+        \         \"protocol\": \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n
+        \         \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"AzureLoadBalancer\",\r\n          \"destinationAddressPrefix\": \"*\",\r\n
+        \         \"access\": \"Allow\",\r\n          \"priority\": 65001,\r\n          \"direction\":
+        \"Inbound\",\r\n          \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"DenyAllInBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/DenyAllInBound\",\r\n
+        \       \"etag\": \"W/\\\"b61d4e03-0588-4fac-8982-2b2e9ea12445\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"description\": \"Deny all inbound traffic\",\r\n          \"protocol\":
+        \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n          \"destinationPortRange\":
+        \"*\",\r\n          \"sourceAddressPrefix\": \"*\",\r\n          \"destinationAddressPrefix\":
+        \"*\",\r\n          \"access\": \"Deny\",\r\n          \"priority\": 65500,\r\n
+        \         \"direction\": \"Inbound\",\r\n          \"sourcePortRanges\": [],\r\n
+        \         \"destinationPortRanges\": [],\r\n          \"sourceAddressPrefixes\":
+        [],\r\n          \"destinationAddressPrefixes\": []\r\n        }\r\n      },\r\n
+        \     {\r\n        \"name\": \"AllowVnetOutBound\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowVnetOutBound\",\r\n
+        \       \"etag\": \"W/\\\"b61d4e03-0588-4fac-8982-2b2e9ea12445\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"description\": \"Allow outbound traffic from all VMs to all VMs
+        in VNET\",\r\n          \"protocol\": \"*\",\r\n          \"sourcePortRange\":
+        \"*\",\r\n          \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"VirtualNetwork\",\r\n          \"destinationAddressPrefix\": \"VirtualNetwork\",\r\n
+        \         \"access\": \"Allow\",\r\n          \"priority\": 65000,\r\n          \"direction\":
+        \"Outbound\",\r\n          \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"AllowInternetOutBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowInternetOutBound\",\r\n
+        \       \"etag\": \"W/\\\"b61d4e03-0588-4fac-8982-2b2e9ea12445\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"description\": \"Allow outbound traffic from all VMs to Internet\",\r\n
+        \         \"protocol\": \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n
+        \         \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"*\",\r\n          \"destinationAddressPrefix\": \"Internet\",\r\n          \"access\":
+        \"Allow\",\r\n          \"priority\": 65001,\r\n          \"direction\": \"Outbound\",\r\n
+        \         \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"DenyAllOutBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/DenyAllOutBound\",\r\n
+        \       \"etag\": \"W/\\\"b61d4e03-0588-4fac-8982-2b2e9ea12445\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"description\": \"Deny all outbound traffic\",\r\n          \"protocol\":
+        \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n          \"destinationPortRange\":
+        \"*\",\r\n          \"sourceAddressPrefix\": \"*\",\r\n          \"destinationAddressPrefix\":
+        \"*\",\r\n          \"access\": \"Deny\",\r\n          \"priority\": 65500,\r\n
+        \         \"direction\": \"Outbound\",\r\n          \"sourcePortRanges\":
+        [],\r\n          \"destinationPortRanges\": [],\r\n          \"sourceAddressPrefixes\":
+        [],\r\n          \"destinationAddressPrefixes\": []\r\n        }\r\n      }\r\n
+        \   ]\r\n  }\r\n}"
+    headers:
+      azure-asyncnotification:
+      - Enabled
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/301a0dec-2f6a-434c-9598-d8f3adf76677?api-version=2022-01-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '6571'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:33 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 64b91308-014f-499b-9581-64dfffcf7cc3
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --resource-group
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/301a0dec-2f6a-434c-9598-d8f3adf76677?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '29'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:33 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - a647a058-e881-4e7c-9d48-577a6ec856d2
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --name --resource-group
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"aadds-nsg-test\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test\",\r\n
+        \ \"etag\": \"W/\\\"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/networkSecurityGroups\",\r\n  \"location\": \"eastus\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"resourceGuid\":
+        \"8ed378cb-f7a2-4b4f-9225-210afd103024\",\r\n    \"securityRules\": [],\r\n
+        \   \"defaultSecurityRules\": [\r\n      {\r\n        \"name\": \"AllowVnetInBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowVnetInBound\",\r\n
+        \       \"etag\": \"W/\\\"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"description\": \"Allow inbound traffic from all VMs in VNET\",\r\n
+        \         \"protocol\": \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n
+        \         \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"VirtualNetwork\",\r\n          \"destinationAddressPrefix\": \"VirtualNetwork\",\r\n
+        \         \"access\": \"Allow\",\r\n          \"priority\": 65000,\r\n          \"direction\":
+        \"Inbound\",\r\n          \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"AllowAzureLoadBalancerInBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowAzureLoadBalancerInBound\",\r\n
+        \       \"etag\": \"W/\\\"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"description\": \"Allow inbound traffic from azure load balancer\",\r\n
+        \         \"protocol\": \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n
+        \         \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"AzureLoadBalancer\",\r\n          \"destinationAddressPrefix\": \"*\",\r\n
+        \         \"access\": \"Allow\",\r\n          \"priority\": 65001,\r\n          \"direction\":
+        \"Inbound\",\r\n          \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"DenyAllInBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/DenyAllInBound\",\r\n
+        \       \"etag\": \"W/\\\"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"description\": \"Deny all inbound traffic\",\r\n          \"protocol\":
+        \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n          \"destinationPortRange\":
+        \"*\",\r\n          \"sourceAddressPrefix\": \"*\",\r\n          \"destinationAddressPrefix\":
+        \"*\",\r\n          \"access\": \"Deny\",\r\n          \"priority\": 65500,\r\n
+        \         \"direction\": \"Inbound\",\r\n          \"sourcePortRanges\": [],\r\n
+        \         \"destinationPortRanges\": [],\r\n          \"sourceAddressPrefixes\":
+        [],\r\n          \"destinationAddressPrefixes\": []\r\n        }\r\n      },\r\n
+        \     {\r\n        \"name\": \"AllowVnetOutBound\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowVnetOutBound\",\r\n
+        \       \"etag\": \"W/\\\"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"description\": \"Allow outbound traffic from all VMs to all VMs
+        in VNET\",\r\n          \"protocol\": \"*\",\r\n          \"sourcePortRange\":
+        \"*\",\r\n          \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"VirtualNetwork\",\r\n          \"destinationAddressPrefix\": \"VirtualNetwork\",\r\n
+        \         \"access\": \"Allow\",\r\n          \"priority\": 65000,\r\n          \"direction\":
+        \"Outbound\",\r\n          \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"AllowInternetOutBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/AllowInternetOutBound\",\r\n
+        \       \"etag\": \"W/\\\"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"description\": \"Allow outbound traffic from all VMs to Internet\",\r\n
+        \         \"protocol\": \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n
+        \         \"destinationPortRange\": \"*\",\r\n          \"sourceAddressPrefix\":
+        \"*\",\r\n          \"destinationAddressPrefix\": \"Internet\",\r\n          \"access\":
+        \"Allow\",\r\n          \"priority\": 65001,\r\n          \"direction\": \"Outbound\",\r\n
+        \         \"sourcePortRanges\": [],\r\n          \"destinationPortRanges\":
+        [],\r\n          \"sourceAddressPrefixes\": [],\r\n          \"destinationAddressPrefixes\":
+        []\r\n        }\r\n      },\r\n      {\r\n        \"name\": \"DenyAllOutBound\",\r\n
+        \       \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/defaultSecurityRules/DenyAllOutBound\",\r\n
+        \       \"etag\": \"W/\\\"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e\\\"\",\r\n
+        \       \"type\": \"Microsoft.Network/networkSecurityGroups/defaultSecurityRules\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"description\": \"Deny all outbound traffic\",\r\n          \"protocol\":
+        \"*\",\r\n          \"sourcePortRange\": \"*\",\r\n          \"destinationPortRange\":
+        \"*\",\r\n          \"sourceAddressPrefix\": \"*\",\r\n          \"destinationAddressPrefix\":
+        \"*\",\r\n          \"access\": \"Deny\",\r\n          \"priority\": 65500,\r\n
+        \         \"direction\": \"Outbound\",\r\n          \"sourcePortRanges\":
+        [],\r\n          \"destinationPortRanges\": [],\r\n          \"sourceAddressPrefixes\":
+        [],\r\n          \"destinationAddressPrefixes\": []\r\n        }\r\n      }\r\n
+        \   ]\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '6578'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:33 GMT
+      etag:
+      - W/"ad422fe0-30fb-4b39-ad22-53cdbf47cf9e"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - bfffb32f-d1fd-4c44-976a-5990dc5a31f4
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"name": "AllowPSRemoting", "properties": {"access": "Allow", "destinationAddressPrefix":
+      "*", "destinationPortRange": "5986", "direction": "Inbound", "priority": 301,
+      "protocol": "Tcp", "sourceAddressPrefix": "AzureActiveDirectoryDomainServices",
+      "sourcePortRange": "*"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '272'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowPSRemoting?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"AllowPSRemoting\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowPSRemoting\",\r\n
+        \ \"etag\": \"W/\\\"af11c92e-ce26-49e6-9110-d6ec456afa2b\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/networkSecurityGroups/securityRules\",\r\n  \"properties\":
+        {\r\n    \"provisioningState\": \"Updating\",\r\n    \"protocol\": \"Tcp\",\r\n
+        \   \"sourcePortRange\": \"*\",\r\n    \"destinationPortRange\": \"5986\",\r\n
+        \   \"sourceAddressPrefix\": \"AzureActiveDirectoryDomainServices\",\r\n    \"destinationAddressPrefix\":
+        \"*\",\r\n    \"access\": \"Allow\",\r\n    \"priority\": 301,\r\n    \"direction\":
+        \"Inbound\",\r\n    \"sourcePortRanges\": [],\r\n    \"destinationPortRanges\":
+        [],\r\n    \"sourceAddressPrefixes\": [],\r\n    \"destinationAddressPrefixes\":
+        []\r\n  }\r\n}"
+    headers:
+      azure-asyncnotification:
+      - Enabled
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/e9b906cb-621e-4143-a761-1586f7980cd8?api-version=2022-01-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '813'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:34 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - b7151a08-c1b3-4733-8b11-338bcbeadcaa
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/e9b906cb-621e-4143-a761-1586f7980cd8?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"InProgress\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '30'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:34 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - dc47e719-2b4a-48ab-aba2-d6c313ff7e74
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/e9b906cb-621e-4143-a761-1586f7980cd8?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '29'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:35 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - b3464139-7076-46d1-b31a-42d9a99d0a89
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowPSRemoting?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"AllowPSRemoting\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowPSRemoting\",\r\n
+        \ \"etag\": \"W/\\\"fa0e053a-474d-42e2-9ee4-317cb279a45b\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/networkSecurityGroups/securityRules\",\r\n  \"properties\":
+        {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"protocol\": \"Tcp\",\r\n
+        \   \"sourcePortRange\": \"*\",\r\n    \"destinationPortRange\": \"5986\",\r\n
+        \   \"sourceAddressPrefix\": \"AzureActiveDirectoryDomainServices\",\r\n    \"destinationAddressPrefix\":
+        \"*\",\r\n    \"access\": \"Allow\",\r\n    \"priority\": 301,\r\n    \"direction\":
+        \"Inbound\",\r\n    \"sourcePortRanges\": [],\r\n    \"destinationPortRanges\":
+        [],\r\n    \"sourceAddressPrefixes\": [],\r\n    \"destinationAddressPrefixes\":
+        []\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '814'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:35 GMT
+      etag:
+      - W/"fa0e053a-474d-42e2-9ee4-317cb279a45b"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - bba672ea-1cfc-4f88-bf00-4a8940c4ff49
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"name": "AllowRD", "properties": {"access": "Allow", "destinationAddressPrefix":
+      "*", "destinationPortRange": "3389", "direction": "Inbound", "priority": 201,
+      "protocol": "Tcp", "sourceAddressPrefix": "CorpNetSaw", "sourcePortRange": "*"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '240'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowRD?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"AllowRD\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowRD\",\r\n
+        \ \"etag\": \"W/\\\"4e5fe6e7-c9cc-48f5-84d2-b08288099530\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/networkSecurityGroups/securityRules\",\r\n  \"properties\":
+        {\r\n    \"provisioningState\": \"Updating\",\r\n    \"protocol\": \"Tcp\",\r\n
+        \   \"sourcePortRange\": \"*\",\r\n    \"destinationPortRange\": \"3389\",\r\n
+        \   \"sourceAddressPrefix\": \"CorpNetSaw\",\r\n    \"destinationAddressPrefix\":
+        \"*\",\r\n    \"access\": \"Allow\",\r\n    \"priority\": 201,\r\n    \"direction\":
+        \"Inbound\",\r\n    \"sourcePortRanges\": [],\r\n    \"destinationPortRanges\":
+        [],\r\n    \"sourceAddressPrefixes\": [],\r\n    \"destinationAddressPrefixes\":
+        []\r\n  }\r\n}"
+    headers:
+      azure-asyncnotification:
+      - Enabled
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/db3e7794-93f1-4e32-ae34-41809462e383?api-version=2022-01-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '773'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:35 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - b6ce3c62-13d1-4065-9d49-e851ec3d0d84
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/db3e7794-93f1-4e32-ae34-41809462e383?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"InProgress\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '30'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:35 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 09957826-58d8-40b3-947e-82c5052465fb
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/db3e7794-93f1-4e32-ae34-41809462e383?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '29'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:36 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 0cb8bbfa-8a19-472a-8484-91833e468fc1
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network nsg rule create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g --nsg-name --priority --access --protocol --direction --destination-port-ranges
+        --source-address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowRD?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"AllowRD\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test/securityRules/AllowRD\",\r\n
+        \ \"etag\": \"W/\\\"ebfba5e1-88b4-4f85-875b-70d9bd6306de\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/networkSecurityGroups/securityRules\",\r\n  \"properties\":
+        {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"protocol\": \"Tcp\",\r\n
+        \   \"sourcePortRange\": \"*\",\r\n    \"destinationPortRange\": \"3389\",\r\n
+        \   \"sourceAddressPrefix\": \"CorpNetSaw\",\r\n    \"destinationAddressPrefix\":
+        \"*\",\r\n    \"access\": \"Allow\",\r\n    \"priority\": 201,\r\n    \"direction\":
+        \"Inbound\",\r\n    \"sourcePortRanges\": [],\r\n    \"destinationPortRanges\":
+        [],\r\n    \"sourceAddressPrefixes\": [],\r\n    \"destinationAddressPrefixes\":
+        []\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '774'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:37 GMT
+      etag:
+      - W/"ebfba5e1-88b4-4f85-875b-70d9bd6306de"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 07f0af93-35a4-4124-a337-5427fa534048
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "eastus", "properties": {"addressSpace": {"addressPrefixes":
+      ["10.0.0.0/16"]}, "enableDdosProtection": false, "enableVmProtection": false,
+      "subnets": [{"name": "default", "properties": {"addressPrefix": "10.0.0.0/24",
+      "networkSecurityGroup": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test"}}}]}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '415'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet1?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"vnet1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet1\",\r\n
+        \ \"etag\": \"W/\\\"8fc0e347-b8db-4131-8287-fe500c09fc7a\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Updating\",\r\n    \"resourceGuid\":
+        \"6c9f4704-6e4b-41ce-8002-099fe8bb6c80\",\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\":
+        [\r\n        \"10.0.0.0/16\"\r\n      ]\r\n    },\r\n    \"subnets\": [\r\n
+        \     {\r\n        \"name\": \"default\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/default\",\r\n
+        \       \"etag\": \"W/\\\"8fc0e347-b8db-4131-8287-fe500c09fc7a\\\"\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"addressPrefix\": \"10.0.0.0/24\",\r\n          \"networkSecurityGroup\":
+        {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test\"\r\n
+        \         },\r\n          \"delegations\": [],\r\n          \"privateEndpointNetworkPolicies\":
+        \"Disabled\",\r\n          \"privateLinkServiceNetworkPolicies\": \"Enabled\"\r\n
+        \       },\r\n        \"type\": \"Microsoft.Network/virtualNetworks/subnets\"\r\n
+        \     }\r\n    ],\r\n    \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\":
+        false\r\n  }\r\n}"
+    headers:
+      azure-asyncnotification:
+      - Enabled
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/9ad46559-78b0-411b-a1b0-f3e6b1ba0ff7?api-version=2022-01-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '1429'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:40 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - fa4837b2-bb58-4d20-8904-592ce0844213
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/9ad46559-78b0-411b-a1b0-f3e6b1ba0ff7?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"InProgress\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '30'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:40 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 0d54661a-2f7b-4788-b257-295631326dfb
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/9ad46559-78b0-411b-a1b0-f3e6b1ba0ff7?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '29'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:50 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 86f3a861-e51b-4eb1-aa0a-1751fd0f400e
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet1?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"vnet1\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet1\",\r\n
+        \ \"etag\": \"W/\\\"42ddd9cc-72e7-49ce-9d9e-a283de45d228\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"resourceGuid\":
+        \"6c9f4704-6e4b-41ce-8002-099fe8bb6c80\",\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\":
+        [\r\n        \"10.0.0.0/16\"\r\n      ]\r\n    },\r\n    \"subnets\": [\r\n
+        \     {\r\n        \"name\": \"default\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/default\",\r\n
+        \       \"etag\": \"W/\\\"42ddd9cc-72e7-49ce-9d9e-a283de45d228\\\"\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"addressPrefix\": \"10.0.0.0/24\",\r\n          \"networkSecurityGroup\":
+        {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test\"\r\n
+        \         },\r\n          \"delegations\": [],\r\n          \"privateEndpointNetworkPolicies\":
+        \"Disabled\",\r\n          \"privateLinkServiceNetworkPolicies\": \"Enabled\"\r\n
+        \       },\r\n        \"type\": \"Microsoft.Network/virtualNetworks/subnets\"\r\n
+        \     }\r\n    ],\r\n    \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\":
+        false\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1431'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:50 GMT
+      etag:
+      - W/"42ddd9cc-72e7-49ce-9d9e-a283de45d228"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 43806290-5336-40ee-8c08-e4bc62cd4254
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "eastus", "properties": {"addressSpace": {"addressPrefixes":
+      ["10.1.0.0/16"]}, "enableDdosProtection": false, "enableVmProtection": false,
+      "subnets": [{"name": "default", "properties": {"addressPrefix": "10.1.0.0/24",
+      "networkSecurityGroup": {"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test"}}}]}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '415'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet2?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"vnet2\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet2\",\r\n
+        \ \"etag\": \"W/\\\"1e636e9d-17e1-4b0d-ac74-1f126e9d34e2\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Updating\",\r\n    \"resourceGuid\":
+        \"d886a8dd-6058-48ce-820f-9dadde8cdf11\",\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\":
+        [\r\n        \"10.1.0.0/16\"\r\n      ]\r\n    },\r\n    \"subnets\": [\r\n
+        \     {\r\n        \"name\": \"default\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/default\",\r\n
+        \       \"etag\": \"W/\\\"1e636e9d-17e1-4b0d-ac74-1f126e9d34e2\\\"\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Updating\",\r\n
+        \         \"addressPrefix\": \"10.1.0.0/24\",\r\n          \"networkSecurityGroup\":
+        {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test\"\r\n
+        \         },\r\n          \"delegations\": [],\r\n          \"privateEndpointNetworkPolicies\":
+        \"Disabled\",\r\n          \"privateLinkServiceNetworkPolicies\": \"Enabled\"\r\n
+        \       },\r\n        \"type\": \"Microsoft.Network/virtualNetworks/subnets\"\r\n
+        \     }\r\n    ],\r\n    \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\":
+        false\r\n  }\r\n}"
+    headers:
+      azure-asyncnotification:
+      - Enabled
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/4631f89f-9e28-4105-864d-0e7222a13816?api-version=2022-01-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '1429'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:51 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 7f8a0e9b-24b6-490d-a102-42f4a64785f2
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/4631f89f-9e28-4105-864d-0e7222a13816?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"InProgress\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '30'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:13:51 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 3d7e99f0-c7a6-431f-a781-4a4131050ed9
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus/operations/4631f89f-9e28-4105-864d-0e7222a13816?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '29'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:14:01 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - da6cd702-edf6-448a-86cd-1f4a34a91d49
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --nsg --subnet-name --address-prefixes
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet2?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"name\": \"vnet2\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet2\",\r\n
+        \ \"etag\": \"W/\\\"e0ca3461-78fb-4357-9a5f-83bc5655d65d\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"resourceGuid\":
+        \"d886a8dd-6058-48ce-820f-9dadde8cdf11\",\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\":
+        [\r\n        \"10.1.0.0/16\"\r\n      ]\r\n    },\r\n    \"subnets\": [\r\n
+        \     {\r\n        \"name\": \"default\",\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet2/subnets/default\",\r\n
+        \       \"etag\": \"W/\\\"e0ca3461-78fb-4357-9a5f-83bc5655d65d\\\"\",\r\n
+        \       \"properties\": {\r\n          \"provisioningState\": \"Succeeded\",\r\n
+        \         \"addressPrefix\": \"10.1.0.0/24\",\r\n          \"networkSecurityGroup\":
+        {\r\n            \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/networkSecurityGroups/aadds-nsg-test\"\r\n
+        \         },\r\n          \"delegations\": [],\r\n          \"privateEndpointNetworkPolicies\":
+        \"Disabled\",\r\n          \"privateLinkServiceNetworkPolicies\": \"Enabled\"\r\n
+        \       },\r\n        \"type\": \"Microsoft.Network/virtualNetworks/subnets\"\r\n
+        \     }\r\n    ],\r\n    \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\":
+        false\r\n  }\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1431'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:14:01 GMT
+      etag:
+      - W/"e0ca3461-78fb-4357-9a5f-83bc5655d65d"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - f52f6d1a-e82d-46da-a088-1495064b4244
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "West US", "properties": {"domainName": "TestDomainService.com",
+      "replicaSets": [{"location": "West US", "subnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.Network/virtualNetworks/vnet1/subnets/default"}]}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - ad ds create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '282'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - --domain --replica-sets --name --resource-group
+      User-Agent:
+      - AZURECLI/2.52.0 azsdk-python-domainservicesresourceprovider/unknown Python/3.11.4
+        (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31) VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest000002/providers/Microsoft.AAD/domainServices/TestDomainService.com?api-version=2020-01-01
+  response:
+    body:
+      string: '{"error":{"code":"BadRequest","message":"Virtual Network location does
+        not match Domain Service resource location."}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '117'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:14:07 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 400
+      message: Bad Request
+version: 1
