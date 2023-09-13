@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"location": "westus2", "properties": {"autoTrackingConfiguration": "disabled",
+      "eventHubUri": "event-hub-uri", "links": [{"channels": [{"bandwidthMHz": 15.0,
+      "centerFrequencyMHz": 8160.0, "endPoint": {"endPointName": "AQUA_directplayback",
+      "ipAddress": "10.0.0.4", "port": "50000", "protocol": "TCP"}, "name": "channel1"}],
+      "direction": "downlink", "name": "Link1", "polarization": "RHCP"}], "networkConfiguration":
+      {"subnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/Rgp/providers/Microsoft.Network/virtualNetworks/Rgp-vnet/subnets/OrbitalSubnetProd"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - orbital contact-profile create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '584'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - --resource-group --name --location --auto-tracking-configuration --event-hub-uri
+        --network-configuration --links
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/test_contact_profiles000001/providers/Microsoft.Orbital/contactProfiles/contact-profile-name?api-version=2022-03-01
+  response:
+    body:
+      string: '{"error":{"code":"InvalidEventHubUriError","target":null,"message":"Event
+        Hub URI: event-hub-uri is in the wrong format. Please ensure that the URI
+        is the Resource ID of the Event Hub instance. Correlation ID: 21e9c64a-7829-41aa-8e94-a9451d7e6125","details":[]}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '262'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 12:57:01 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1196'
+    status:
+      code: 400
+      message: Bad Request
+version: 1
