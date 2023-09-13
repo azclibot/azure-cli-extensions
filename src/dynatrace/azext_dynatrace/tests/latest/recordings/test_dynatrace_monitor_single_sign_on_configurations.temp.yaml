@@ -1,0 +1,112 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - dynatrace monitor create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -n --user-info --plan-data --environment
+      User-Agent:
+      - AZURECLI/2.52.0 azsdk-python-azure-mgmt-resource/23.1.0b2 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_dynatrace_monitor_single_sign_on_configurations000001?api-version=2022-09-01
+  response:
+    body:
+      string: '{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_dynatrace_monitor_single_sign_on_configurations000001",
+        "name": "cli_test_dynatrace_monitor_single_sign_on_configurations000001",
+        "type": "Microsoft.Resources/resourceGroups", "location": "eastus2euap", "tags":
+        {"product": "azurecli", "cause": "automation", "test": "test_dynatrace_monitor_single_sign_on_configurations",
+        "date": "2023-09-13T16:21:39Z", "module": "dynatrace"}, "properties": {"provisioningState":
+        "Succeeded"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '511'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Wed, 13 Sep 2023 16:21:39 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "eastus2euap", "properties": {"dynatraceEnvironmentProperties":
+      {"singleSignOnProperties": {"aadDomains": ["abc"]}}, "planData": {"billingCycle":
+      "Monthly", "effectiveDate": "2022-08-20T00:00:00.000Z", "planDetails": "azureportalintegration_privatepreview@TIDhjdtn7tfnxcy",
+      "usageType": "committed"}, "userInfo": {"country": "US", "emailAddress": "agarwald@microsoft.com",
+      "firstName": "Alice", "lastName": "Bobab", "phoneNumber": "1234567890"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - dynatrace monitor create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '459'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -g -n --user-info --plan-data --environment
+      User-Agent:
+      - AZURECLI/2.52.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.4 (Linux-5.15.0-1042-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_dynatrace_monitor_single_sign_on_configurations000001/providers/Dynatrace.Observability/monitors/monitor000002?api-version=2021-09-01
+  response:
+    body:
+      string: '{"error": {"code": "BadRequest", "message": "SaaS Purchase Payment
+        Check Failed as validationResponse was {\"isEligible\":false,\"errorMessage\":\"No
+        employee profile was found in Jarvis for a7116fa1-5ab4-4582-8d17-77e64b46b349
+        with GTM azure subscription :0b1f6471-1bf0-4dda-aec3-cb9272f09590\"} "}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '300'
+      content-type:
+      - application/json
+      date:
+      - Wed, 13 Sep 2023 16:21:47 GMT
+      expires:
+      - '-1'
+      mise-correlation-id:
+      - 652f2392-a568-49d7-b791-ecd08e4dbe47
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:fab059ea-d726-424a-9451-6beb3dc74944
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-failure-cause:
+      - gateway
+      x-ms-providerhub-traffic:
+      - 'True'
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+    status:
+      code: 400
+      message: Bad Request
+version: 1
