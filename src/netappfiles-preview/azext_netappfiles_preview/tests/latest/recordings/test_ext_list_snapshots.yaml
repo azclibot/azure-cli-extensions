@@ -1,57 +1,7 @@
 interactions:
 - request:
-    body: !!python/unicode '{"location": "westus", "tags": {"date": "2019-06-21T09:08:53Z",
-      "product": "azurecli", "cause": "automation"}}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - group create
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '110'
-      Content-Type:
-      - application/json; charset=utf-8
-      ParameterSetName:
-      - --location --name --tag
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        resourcemanagementclient/2.1.0 Azure-SDK-For-Python AZURECLI/2.0.67
-      accept-language:
-      - en-US
-    method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/clitest.rg000001?api-version=2018-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001","name":"clitest.rg000001","location":"westus","tags":{"date":"2019-06-21T09:08:53Z","product":"azurecli","cause":"automation"},"properties":{"provisioningState":"Succeeded"}}'
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '384'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:08:56 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      x-content-type-options:
-      - nosniff
-      x-ms-ratelimit-remaining-subscription-writes:
-      - '1198'
-    status:
-      code: 201
-      message: Created
-- request:
-    body: !!python/unicode '{"location": "eastus2", "properties": {"dhcpOptions":
-      {}, "addressSpace": {"addressPrefixes": ["10.5.0.0/16"]}}, "tags": {}}'
+    body: '{"location": "eastus2", "properties": {"addressSpace": {"addressPrefixes":
+      ["10.5.0.0/16"]}, "enableDdosProtection": false, "enableVmProtection": false}}'
     headers:
       Accept:
       - application/json
@@ -62,42 +12,39 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '124'
+      - '153'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -n --resource-group -l --address-prefix
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        networkmanagementclient/3.0.0 Azure-SDK-For-Python AZURECLI/2.0.67
-      accept-language:
-      - en-US
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007?api-version=2019-04-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007?api-version=2022-01-01
   response:
     body:
-      string: !!python/unicode "{\r\n  \"name\": \"cli-vnet-000007\",\r\n  \"id\"\
-        : \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007\"\
-        ,\r\n  \"etag\": \"W/\\\"7da78d8d-4f1c-4465-b59e-13c657acc6dc\\\"\",\r\n \
-        \ \"type\": \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus2\"\
-        ,\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":\
-        \ \"Updating\",\r\n    \"resourceGuid\": \"d3fa88b0-f832-4212-9d11-ff94e186fc6b\"\
-        ,\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\": [\r\n        \"\
-        10.5.0.0/16\"\r\n      ]\r\n    },\r\n    \"dhcpOptions\": {\r\n      \"dnsServers\"\
-        : []\r\n    },\r\n    \"subnets\": [],\r\n    \"virtualNetworkPeerings\":\
-        \ [],\r\n    \"enableDdosProtection\": false,\r\n    \"enableVmProtection\"\
-        : false\r\n  }\r\n}"
+      string: "{\r\n  \"name\": \"cli-vnet-000007\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007\",\r\n
+        \ \"etag\": \"W/\\\"d0eb9566-7b6f-4272-9763-bf3a18cfe951\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus2\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Updating\",\r\n    \"resourceGuid\":
+        \"60f1d7ea-f1fe-4fbb-a1ee-507b7b786cac\",\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\":
+        [\r\n        \"10.5.0.0/16\"\r\n      ]\r\n    },\r\n    \"subnets\": [],\r\n
+        \   \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\": false\r\n
+        \ }\r\n}"
     headers:
+      azure-asyncnotification:
+      - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/8845635c-22c4-4f39-b547-20fe2633be35?api-version=2019-04-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/561ba823-aa25-43c1-ae05-0ac77b0c880b?api-version=2022-01-01
       cache-control:
       - no-cache
       content-length:
-      - '805'
+      - '625'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:09:01 GMT
+      - Sun, 08 Oct 2023 03:35:39 GMT
       expires:
       - '-1'
       pragma:
@@ -109,16 +56,18 @@ interactions:
       - max-age=31536000; includeSubDomains
       x-content-type-options:
       - nosniff
+      x-ms-arm-service-request-id:
+      - c19ece24-b9a6-4096-98c8-5f62076c956d
       x-ms-ratelimit-remaining-subscription-writes:
       - '1199'
     status:
       code: 201
-      message: Created
+      message: ''
 - request:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -128,13 +77,63 @@ interactions:
       ParameterSetName:
       - -n --resource-group -l --address-prefix
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        networkmanagementclient/3.0.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/8845635c-22c4-4f39-b547-20fe2633be35?api-version=2019-04-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/561ba823-aa25-43c1-ae05-0ac77b0c880b?api-version=2022-01-01
   response:
     body:
-      string: !!python/unicode "{\r\n  \"status\": \"Succeeded\"\r\n}"
+      string: "{\r\n  \"status\": \"InProgress\"\r\n}"
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '30'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:35:39 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 281f49c4-92ee-4f7d-bed3-48d56ac69e87
+    status:
+      code: 200
+      message: ''
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n --resource-group -l --address-prefix
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/561ba823-aa25-43c1-ae05-0ac77b0c880b?api-version=2022-01-01
+  response:
+    body:
+      string: "{\r\n  \"status\": \"Succeeded\"\r\n}"
     headers:
       cache-control:
       - no-cache
@@ -143,7 +142,7 @@ interactions:
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:09:05 GMT
+      - Sun, 08 Oct 2023 03:35:50 GMT
       expires:
       - '-1'
       pragma:
@@ -159,6 +158,8 @@ interactions:
       - Accept-Encoding
       x-content-type-options:
       - nosniff
+      x-ms-arm-service-request-id:
+      - feb90ae1-4cff-4599-81b9-0f599cc52289
     status:
       code: 200
       message: OK
@@ -166,7 +167,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -176,34 +177,31 @@ interactions:
       ParameterSetName:
       - -n --resource-group -l --address-prefix
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        networkmanagementclient/3.0.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007?api-version=2019-04-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007?api-version=2022-01-01
   response:
     body:
-      string: !!python/unicode "{\r\n  \"name\": \"cli-vnet-000007\",\r\n  \"id\"\
-        : \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007\"\
-        ,\r\n  \"etag\": \"W/\\\"d5656806-e4c1-42b8-bec5-9440949a1d2d\\\"\",\r\n \
-        \ \"type\": \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus2\"\
-        ,\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":\
-        \ \"Succeeded\",\r\n    \"resourceGuid\": \"d3fa88b0-f832-4212-9d11-ff94e186fc6b\"\
-        ,\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\": [\r\n        \"\
-        10.5.0.0/16\"\r\n      ]\r\n    },\r\n    \"dhcpOptions\": {\r\n      \"dnsServers\"\
-        : []\r\n    },\r\n    \"subnets\": [],\r\n    \"virtualNetworkPeerings\":\
-        \ [],\r\n    \"enableDdosProtection\": false,\r\n    \"enableVmProtection\"\
-        : false\r\n  }\r\n}"
+      string: "{\r\n  \"name\": \"cli-vnet-000007\",\r\n  \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007\",\r\n
+        \ \"etag\": \"W/\\\"855383f7-3e16-4ef7-a65a-3289fdb63440\\\"\",\r\n  \"type\":
+        \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus2\",\r\n
+        \ \"properties\": {\r\n    \"provisioningState\": \"Succeeded\",\r\n    \"resourceGuid\":
+        \"60f1d7ea-f1fe-4fbb-a1ee-507b7b786cac\",\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\":
+        [\r\n        \"10.5.0.0/16\"\r\n      ]\r\n    },\r\n    \"subnets\": [],\r\n
+        \   \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\": false\r\n
+        \ }\r\n}"
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '806'
+      - '626'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:09:05 GMT
+      - Sun, 08 Oct 2023 03:35:51 GMT
       etag:
-      - W/"d5656806-e4c1-42b8-bec5-9440949a1d2d"
+      - W/"855383f7-3e16-4ef7-a65a-3289fdb63440"
       expires:
       - '-1'
       pragma:
@@ -219,80 +217,14 @@ interactions:
       - Accept-Encoding
       x-content-type-options:
       - nosniff
+      x-ms-arm-service-request-id:
+      - 7e42e61b-aa11-4c40-890e-b513c29534fe
     status:
       code: 200
       message: OK
 - request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - network vnet subnet create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - -n --vnet-name --address-prefixes --delegations -g
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        networkmanagementclient/3.0.0 Azure-SDK-For-Python AZURECLI/2.0.67
-      accept-language:
-      - en-US
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007?api-version=2019-04-01
-  response:
-    body:
-      string: !!python/unicode "{\r\n  \"name\": \"cli-vnet-000007\",\r\n  \"id\"\
-        : \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007\"\
-        ,\r\n  \"etag\": \"W/\\\"d5656806-e4c1-42b8-bec5-9440949a1d2d\\\"\",\r\n \
-        \ \"type\": \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus2\"\
-        ,\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":\
-        \ \"Succeeded\",\r\n    \"resourceGuid\": \"d3fa88b0-f832-4212-9d11-ff94e186fc6b\"\
-        ,\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\": [\r\n        \"\
-        10.5.0.0/16\"\r\n      ]\r\n    },\r\n    \"dhcpOptions\": {\r\n      \"dnsServers\"\
-        : []\r\n    },\r\n    \"subnets\": [],\r\n    \"virtualNetworkPeerings\":\
-        \ [],\r\n    \"enableDdosProtection\": false,\r\n    \"enableVmProtection\"\
-        : false\r\n  }\r\n}"
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '806'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:09:06 GMT
-      etag:
-      - W/"d5656806-e4c1-42b8-bec5-9440949a1d2d"
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      server:
-      - Microsoft-HTTPAPI/2.0
-      - Microsoft-HTTPAPI/2.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-    status:
-      code: 200
-      message: OK
-- request:
-    body: !!python/unicode '{"id": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007",
-      "etag": "W/\"d5656806-e4c1-42b8-bec5-9440949a1d2d\"", "location": "eastus2",
-      "properties": {"virtualNetworkPeerings": [], "subnets": [{"name": "subnet02",
-      "properties": {"addressPrefix": "10.5.0.0/24", "delegations": [{"name": "0",
-      "properties": {"serviceName": "Microsoft.Netapp/volumes"}}]}}], "addressSpace":
-      {"addressPrefixes": ["10.5.0.0/16"]}, "enableVmProtection": false, "dhcpOptions":
-      {"dnsServers": []}, "resourceGuid": "d3fa88b0-f832-4212-9d11-ff94e186fc6b",
-      "enableDdosProtection": false, "provisioningState": "Succeeded"}, "tags": {}}'
+    body: '{"name": "subnet02", "properties": {"addressPrefix": "10.5.0.0/24", "delegations":
+      [{"name": "0", "properties": {"serviceName": "Microsoft.Netapp/volumes"}}]}}'
     headers:
       Accept:
       - application/json
@@ -303,58 +235,32 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '769'
+      - '159'
       Content-Type:
-      - application/json; charset=utf-8
+      - application/json
       ParameterSetName:
       - -n --vnet-name --address-prefixes --delegations -g
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        networkmanagementclient/3.0.0 Azure-SDK-For-Python AZURECLI/2.0.67
-      accept-language:
-      - en-US
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
     method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007?api-version=2019-04-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02?api-version=2023-05-01
   response:
     body:
-      string: !!python/unicode "{\r\n  \"name\": \"cli-vnet-000007\",\r\n  \"id\"\
-        : \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007\"\
-        ,\r\n  \"etag\": \"W/\\\"3041998a-ee7d-4a94-9df3-d44b943127d6\\\"\",\r\n \
-        \ \"type\": \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus2\"\
-        ,\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":\
-        \ \"Updating\",\r\n    \"resourceGuid\": \"d3fa88b0-f832-4212-9d11-ff94e186fc6b\"\
-        ,\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\": [\r\n        \"\
-        10.5.0.0/16\"\r\n      ]\r\n    },\r\n    \"dhcpOptions\": {\r\n      \"dnsServers\"\
-        : []\r\n    },\r\n    \"subnets\": [\r\n      {\r\n        \"name\": \"subnet02\"\
-        ,\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02\"\
-        ,\r\n        \"etag\": \"W/\\\"3041998a-ee7d-4a94-9df3-d44b943127d6\\\"\"\
-        ,\r\n        \"properties\": {\r\n          \"provisioningState\": \"Updating\"\
-        ,\r\n          \"addressPrefix\": \"10.5.0.0/24\",\r\n          \"delegations\"\
-        : [\r\n            {\r\n              \"name\": \"0\",\r\n              \"\
-        id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02/delegations/0\"\
-        ,\r\n              \"etag\": \"W/\\\"3041998a-ee7d-4a94-9df3-d44b943127d6\\\
-        \"\",\r\n              \"properties\": {\r\n                \"provisioningState\"\
-        : \"Succeeded\",\r\n                \"serviceName\": \"Microsoft.Netapp/volumes\"\
-        ,\r\n                \"actions\": [\r\n                  \"Microsoft.Network/networkinterfaces/*\"\
-        ,\r\n                  \"Microsoft.Network/virtualNetworks/subnets/join/action\"\
-        \r\n                ]\r\n              },\r\n              \"type\": \"Microsoft.Network/virtualNetworks/subnets/delegations\"\
-        \r\n            }\r\n          ],\r\n          \"purpose\": \"HostedWorkloads\"\
-        ,\r\n          \"privateEndpointNetworkPolicies\": \"Enabled\",\r\n      \
-        \    \"privateLinkServiceNetworkPolicies\": \"Enabled\"\r\n        },\r\n\
-        \        \"type\": \"Microsoft.Network/virtualNetworks/subnets\"\r\n     \
-        \ }\r\n    ],\r\n    \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\"\
-        : false,\r\n    \"enableVmProtection\": false\r\n  }\r\n}"
+      string: '{"name":"subnet02","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02","etag":"W/\"53024535-7bfb-4828-ab1b-f1d4f6a8c304\"","properties":{"provisioningState":"Updating","addressPrefix":"10.5.0.0/24","delegations":[{"name":"0","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02/delegations/0","etag":"W/\"53024535-7bfb-4828-ab1b-f1d4f6a8c304\"","properties":{"provisioningState":"Succeeded","serviceName":"Microsoft.Netapp/volumes","actions":["Microsoft.Network/networkinterfaces/*","Microsoft.Network/virtualNetworks/subnets/join/action"]},"type":"Microsoft.Network/virtualNetworks/subnets/delegations"}],"purpose":"HostedWorkloads","privateEndpointNetworkPolicies":"Disabled","privateLinkServiceNetworkPolicies":"Enabled"},"type":"Microsoft.Network/virtualNetworks/subnets"}'
     headers:
+      azure-asyncnotification:
+      - Enabled
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/d15929ce-584e-48bf-b914-747030620928?api-version=2019-04-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/aa2a3507-ed0d-4cb3-89e5-aeac5ccc5817?api-version=2023-05-01
       cache-control:
       - no-cache
       content-length:
-      - '2367'
+      - '1006'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:09:06 GMT
+      - Sun, 08 Oct 2023 03:35:51 GMT
       expires:
       - '-1'
       pragma:
@@ -364,22 +270,20 @@ interactions:
       - Microsoft-HTTPAPI/2.0
       strict-transport-security:
       - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
       x-content-type-options:
       - nosniff
+      x-ms-arm-service-request-id:
+      - a5094a16-5518-4c87-b11e-54b4da1e82f2
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1197'
+      - '1192'
     status:
-      code: 200
-      message: OK
+      code: 201
+      message: Created
 - request:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -389,22 +293,22 @@ interactions:
       ParameterSetName:
       - -n --vnet-name --address-prefixes --delegations -g
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        networkmanagementclient/3.0.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/d15929ce-584e-48bf-b914-747030620928?api-version=2019-04-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/aa2a3507-ed0d-4cb3-89e5-aeac5ccc5817?api-version=2023-05-01
   response:
     body:
-      string: !!python/unicode "{\r\n  \"status\": \"Succeeded\"\r\n}"
+      string: '{"status":"InProgress"}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '29'
+      - '23'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:09:10 GMT
+      - Sun, 08 Oct 2023 03:35:51 GMT
       expires:
       - '-1'
       pragma:
@@ -420,6 +324,8 @@ interactions:
       - Accept-Encoding
       x-content-type-options:
       - nosniff
+      x-ms-arm-service-request-id:
+      - 5f032b16-db9b-43cc-82e7-42d9bd17e729
     status:
       code: 200
       message: OK
@@ -427,7 +333,7 @@ interactions:
     body: null
     headers:
       Accept:
-      - application/json
+      - '*/*'
       Accept-Encoding:
       - gzip, deflate
       CommandName:
@@ -437,50 +343,74 @@ interactions:
       ParameterSetName:
       - -n --vnet-name --address-prefixes --delegations -g
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        networkmanagementclient/3.0.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007?api-version=2019-04-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.Network/locations/eastus2/operations/aa2a3507-ed0d-4cb3-89e5-aeac5ccc5817?api-version=2023-05-01
   response:
     body:
-      string: !!python/unicode "{\r\n  \"name\": \"cli-vnet-000007\",\r\n  \"id\"\
-        : \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007\"\
-        ,\r\n  \"etag\": \"W/\\\"ad891e3a-0c79-4259-aef7-70b6b25b300f\\\"\",\r\n \
-        \ \"type\": \"Microsoft.Network/virtualNetworks\",\r\n  \"location\": \"eastus2\"\
-        ,\r\n  \"tags\": {},\r\n  \"properties\": {\r\n    \"provisioningState\":\
-        \ \"Succeeded\",\r\n    \"resourceGuid\": \"d3fa88b0-f832-4212-9d11-ff94e186fc6b\"\
-        ,\r\n    \"addressSpace\": {\r\n      \"addressPrefixes\": [\r\n        \"\
-        10.5.0.0/16\"\r\n      ]\r\n    },\r\n    \"dhcpOptions\": {\r\n      \"dnsServers\"\
-        : []\r\n    },\r\n    \"subnets\": [\r\n      {\r\n        \"name\": \"subnet02\"\
-        ,\r\n        \"id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02\"\
-        ,\r\n        \"etag\": \"W/\\\"ad891e3a-0c79-4259-aef7-70b6b25b300f\\\"\"\
-        ,\r\n        \"properties\": {\r\n          \"provisioningState\": \"Succeeded\"\
-        ,\r\n          \"addressPrefix\": \"10.5.0.0/24\",\r\n          \"delegations\"\
-        : [\r\n            {\r\n              \"name\": \"0\",\r\n              \"\
-        id\": \"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02/delegations/0\"\
-        ,\r\n              \"etag\": \"W/\\\"ad891e3a-0c79-4259-aef7-70b6b25b300f\\\
-        \"\",\r\n              \"properties\": {\r\n                \"provisioningState\"\
-        : \"Succeeded\",\r\n                \"serviceName\": \"Microsoft.Netapp/volumes\"\
-        ,\r\n                \"actions\": [\r\n                  \"Microsoft.Network/networkinterfaces/*\"\
-        ,\r\n                  \"Microsoft.Network/virtualNetworks/subnets/join/action\"\
-        \r\n                ]\r\n              },\r\n              \"type\": \"Microsoft.Network/virtualNetworks/subnets/delegations\"\
-        \r\n            }\r\n          ],\r\n          \"purpose\": \"HostedWorkloads\"\
-        ,\r\n          \"privateEndpointNetworkPolicies\": \"Enabled\",\r\n      \
-        \    \"privateLinkServiceNetworkPolicies\": \"Enabled\"\r\n        },\r\n\
-        \        \"type\": \"Microsoft.Network/virtualNetworks/subnets\"\r\n     \
-        \ }\r\n    ],\r\n    \"virtualNetworkPeerings\": [],\r\n    \"enableDdosProtection\"\
-        : false,\r\n    \"enableVmProtection\": false\r\n  }\r\n}"
+      string: '{"status":"Succeeded"}'
     headers:
       cache-control:
       - no-cache
       content-length:
-      - '2369'
+      - '22'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:09:11 GMT
+      - Sun, 08 Oct 2023 03:36:01 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-HTTPAPI/2.0
+      - Microsoft-HTTPAPI/2.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-arm-service-request-id:
+      - 41fb7153-8229-4cea-8c2f-c2dd0331467c
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - network vnet subnet create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n --vnet-name --address-prefixes --delegations -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02?api-version=2023-05-01
+  response:
+    body:
+      string: '{"name":"subnet02","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02","etag":"W/\"0acfdbc8-5ec0-4eba-bbe7-ccb3c900024c\"","properties":{"provisioningState":"Succeeded","addressPrefix":"10.5.0.0/24","delegations":[{"name":"0","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02/delegations/0","etag":"W/\"0acfdbc8-5ec0-4eba-bbe7-ccb3c900024c\"","properties":{"provisioningState":"Succeeded","serviceName":"Microsoft.Netapp/volumes","actions":["Microsoft.Network/networkinterfaces/*","Microsoft.Network/virtualNetworks/subnets/join/action"]},"type":"Microsoft.Network/virtualNetworks/subnets/delegations"}],"purpose":"HostedWorkloads","privateEndpointNetworkPolicies":"Disabled","privateLinkServiceNetworkPolicies":"Enabled"},"type":"Microsoft.Network/virtualNetworks/subnets"}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1007'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:36:01 GMT
       etag:
-      - W/"ad891e3a-0c79-4259-aef7-70b6b25b300f"
+      - W/"0acfdbc8-5ec0-4eba-bbe7-ccb3c900024c"
       expires:
       - '-1'
       pragma:
@@ -496,11 +426,13 @@ interactions:
       - Accept-Encoding
       x-content-type-options:
       - nosniff
+      x-ms-arm-service-request-id:
+      - 2dc81842-c698-40ec-9429-df458acd14c0
     status:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '{"location": "eastus2"}'
+    body: '{"location": "eastus2"}'
     headers:
       Accept:
       - application/json
@@ -517,36 +449,194 @@ interactions:
       ParameterSetName:
       - -g -a -l
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
       accept-language:
       - en-US
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002","name":"cli-acc-000002","type":"Microsoft.NetApp/netAppAccounts","etag":"W/\"datetime''2019-06-21T09%3A09%3A15.4499008Z''\"","location":"eastus2","properties":{"provisioningState":"Succeeded","name":"cli-acc-000002"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002","name":"cli-acc-000002","type":"Microsoft.NetApp/netAppAccounts","etag":"W/\"datetime''2023-10-08T03%3A36%3A04.0119565Z''\"","location":"eastus2","properties":{"provisioningState":"Creating"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/614f9c7f-71ff-42e0-befb-53e71b74a722?api-version=2019-05-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/1c32d8f9-8d62-4331-a87a-5fc3d01c1334?api-version=2019-05-01
       cache-control:
       - no-cache
       content-length:
-      - '453'
+      - '339'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:09:16 GMT
+      - Sun, 08 Oct 2023 03:36:04 GMT
       etag:
-      - W/"datetime'2019-06-21T09%3A09%3A15.4499008Z'"
+      - W/"datetime'2023-10-08T03%3A36%3A04.0119565Z'"
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
+      server:
+      - Microsoft-IIS/10.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - netappfiles account create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -a -l
+      User-Agent:
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/1c32d8f9-8d62-4331-a87a-5fc3d01c1334?api-version=2019-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/1c32d8f9-8d62-4331-a87a-5fc3d01c1334","name":"1c32d8f9-8d62-4331-a87a-5fc3d01c1334","status":"Succeeded","startTime":"2023-10-08T03:36:04.0094788Z","endTime":"2023-10-08T03:36:04.065254Z","percentComplete":100.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002","action":"CREATE"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '524'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:36:34 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-IIS/10.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - netappfiles account create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -g -a -l
+      User-Agent:
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002?api-version=2019-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002","name":"cli-acc-000002","type":"Microsoft.NetApp/netAppAccounts","etag":"W/\"datetime''2023-10-08T03%3A36%3A04.0748235Z''\"","location":"eastus2","properties":{"provisioningState":"Succeeded"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '340'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:36:34 GMT
+      etag:
+      - W/"datetime'2023-10-08T03%3A36%3A04.0748235Z'"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-IIS/10.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "eastus2", "properties": {"size": 4398046511104, "serviceLevel":
+      "Premium"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - netappfiles pool create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '89'
+      Content-Type:
+      - application/json; charset=utf-8
+      ParameterSetName:
+      - -g -a -p -l --service-level --size
+      User-Agent:
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
+      accept-language:
+      - en-US
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003?api-version=2019-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003","name":"cli-acc-000002/cli-pool-000003","type":"Microsoft.NetApp/netAppAccounts/capacityPools","etag":"W/\"datetime''2023-10-08T03%3A36%3A36.1902853Z''\"","location":"eastus2","properties":{"serviceLevel":"Premium","size":4398046511104,"provisioningState":"Creating"}}'
+    headers:
+      azure-asyncoperation:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/d1ee6085-bada-44bf-a800-fb69637c5cdc?api-version=2019-05-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '445'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:36:35 GMT
+      etag:
+      - W/"datetime'2023-10-08T03%3A36%3A36.1902853Z'"
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -568,206 +658,33 @@ interactions:
       Accept-Encoding:
       - gzip, deflate
       CommandName:
-      - netappfiles account create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - -g -a -l
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/614f9c7f-71ff-42e0-befb-53e71b74a722?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/614f9c7f-71ff-42e0-befb-53e71b74a722","name":"614f9c7f-71ff-42e0-befb-53e71b74a722","status":"Succeeded","startTime":"2019-06-21T09:09:15.314786Z","endTime":"2019-06-21T09:09:15.5022934Z","percentComplete":100.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '575'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:09:46 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles account create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - -g -a -l
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002","name":"cli-acc-000002","type":"Microsoft.NetApp/netAppAccounts","etag":"W/\"datetime''2019-06-21T09%3A09%3A15.6400355Z''\"","location":"eastus2","properties":{"provisioningState":"Succeeded","name":"cli-acc-000002"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '453'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:09:47 GMT
-      etag:
-      - W/"datetime'2019-06-21T09%3A09%3A15.6400355Z'"
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: !!python/unicode '{"location": "eastus2", "properties": {"serviceLevel":
-      "Premium", "size": 4398046511104}}'
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles pool create
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '89'
-      Content-Type:
-      - application/json; charset=utf-8
-      ParameterSetName:
-      - -g -a -p -l --service-level --size
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-      accept-language:
-      - en-US
-    method: PUT
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003","name":"cli-acc-000002/cli-pool-000003","type":"Microsoft.NetApp/netAppAccounts/capacityPools","etag":"W/\"datetime''2019-06-21T09%3A09%3A51.5934329Z''\"","location":"eastus2","properties":{"serviceLevel":"Premium","size":4398046511104,"provisioningState":"Creating"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3383a9a3-088e-4ee4-a5b9-70871631dd2f?api-version=2019-05-01
-      cache-control:
-      - no-cache
-      content-length:
-      - '542'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:09:51 GMT
-      etag:
-      - W/"datetime'2019-06-21T09%3A09%3A51.5934329Z'"
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      x-content-type-options:
-      - nosniff
-      x-ms-ratelimit-remaining-subscription-writes:
-      - '1197'
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 201
-      message: Created
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
       - netappfiles pool create
       Connection:
       - keep-alive
       ParameterSetName:
       - -g -a -p -l --service-level --size
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3383a9a3-088e-4ee4-a5b9-70871631dd2f?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/d1ee6085-bada-44bf-a800-fb69637c5cdc?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3383a9a3-088e-4ee4-a5b9-70871631dd2f","name":"3383a9a3-088e-4ee4-a5b9-70871631dd2f","status":"Succeeded","startTime":"2019-06-21T09:09:51.4482098Z","endTime":"2019-06-21T09:09:51.948364Z","percentComplete":100.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/d1ee6085-bada-44bf-a800-fb69637c5cdc","name":"d1ee6085-bada-44bf-a800-fb69637c5cdc","status":"Succeeded","startTime":"2023-10-08T03:36:36.1990404Z","endTime":"2023-10-08T03:36:36.7868136Z","percentComplete":100.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '614'
+      - '555'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:10:24 GMT
+      - Sun, 08 Oct 2023 03:37:06 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -797,32 +714,29 @@ interactions:
       ParameterSetName:
       - -g -a -p -l --service-level --size
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003","name":"cli-acc-000002/cli-pool-000003","type":"Microsoft.NetApp/netAppAccounts/capacityPools","etag":"W/\"datetime''2019-06-21T09%3A09%3A52.0837797Z''\"","location":"eastus2","properties":{"poolId":"58471b86-9db3-d663-7569-8b207be73f04","name":"cli-acc-000002/cli-pool-000003","serviceLevel":"Premium","size":4398046511104,"provisioningState":"Succeeded"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003","name":"cli-acc-000002/cli-pool-000003","type":"Microsoft.NetApp/netAppAccounts/capacityPools","etag":"W/\"datetime''2023-10-08T03%3A36%3A36.7752059Z''\"","location":"eastus2","properties":{"poolId":"97537336-4d3d-811d-e827-deb527967d14","serviceLevel":"Premium","size":4398046511104,"provisioningState":"Succeeded"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '650'
+      - '494'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:10:31 GMT
+      - Sun, 08 Oct 2023 03:37:07 GMT
       etag:
-      - W/"datetime'2019-06-21T09%3A09%3A52.0837797Z'"
+      - W/"datetime'2023-10-08T03%3A36%3A36.7752059Z'"
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -839,9 +753,8 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '{"properties": {"usageThreshold": 107374182400, "subnetId":
-      "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02",
-      "serviceLevel": "Premium", "creationToken": "cli-vol-000004"}, "location": "eastus2"}'
+    body: '{"location": "eastus2", "properties": {"creationToken": "cli-vol-000004",
+      "serviceLevel": "Premium", "usageThreshold": 107374182400, "subnetId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02"}}'
     headers:
       Accept:
       - application/json
@@ -852,43 +765,40 @@ interactions:
       Connection:
       - keep-alive
       Content-Length:
-      - '387'
+      - '309'
       Content-Type:
       - application/json; charset=utf-8
       ParameterSetName:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
       accept-language:
       - en-US
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes","etag":"W/\"datetime''2019-06-21T09%3A10%3A37.9581855Z''\"","location":"eastus2","properties":{"serviceLevel":"Premium","creationToken":"cli-vol-000004","usageThreshold":107374182400,"subnetId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02","provisioningState":"Creating"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes","etag":"W/\"datetime''2023-10-08T03%3A37%3A08.6268551Z''\"","location":"eastus2","properties":{"serviceLevel":"Premium","creationToken":"cli-vol-000004","usageThreshold":107374182400,"subnetId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02","provisioningState":"Creating"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       azure-asyncoperation:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
       cache-control:
       - no-cache
       content-length:
-      - '902'
+      - '707'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:10:38 GMT
+      - Sun, 08 Oct 2023 03:37:08 GMT
       etag:
-      - W/"datetime'2019-06-21T09%3A10%3A37.9581855Z'"
+      - W/"datetime'2023-10-08T03%3A37%3A08.6268551Z'"
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -896,7 +806,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1197'
+      - '1191'
       x-powered-by:
       - ASP.NET
     status:
@@ -917,30 +827,74 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '637'
+      - '566'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:11:11 GMT
+      - Sun, 08 Oct 2023 03:37:39 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
+      server:
+      - Microsoft-IIS/10.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - netappfiles volume create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --resource-group --account-name --pool-name --volume-name -l --service-level
+        --usage-threshold --creation-token --subnet-id
+      User-Agent:
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '566'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:38:08 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -971,30 +925,74 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '637'
+      - '566'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:11:43 GMT
+      - Sun, 08 Oct 2023 03:38:39 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
+      server:
+      - Microsoft-IIS/10.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - netappfiles volume create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --resource-group --account-name --pool-name --volume-name -l --service-level
+        --usage-threshold --creation-token --subnet-id
+      User-Agent:
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '566'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:39:09 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1025,30 +1023,27 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '637'
+      - '566'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:12:17 GMT
+      - Sun, 08 Oct 2023 03:39:39 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1079,30 +1074,27 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '637'
+      - '566'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:12:49 GMT
+      - Sun, 08 Oct 2023 03:40:10 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1133,30 +1125,121 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '637'
+      - '566'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:13:22 GMT
+      - Sun, 08 Oct 2023 03:40:40 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
+      server:
+      - Microsoft-IIS/10.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - netappfiles volume create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --resource-group --account-name --pool-name --volume-name -l --service-level
+        --usage-threshold --creation-token --subnet-id
+      User-Agent:
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '566'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:41:11 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Microsoft-IIS/10.0
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - netappfiles volume create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - --resource-group --account-name --pool-name --volume-name -l --service-level
+        --usage-threshold --creation-token --subnet-id
+      User-Agent:
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '566'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Sun, 08 Oct 2023 03:41:40 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1187,30 +1270,27 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Creating","startTime":"2023-10-08T03:37:08.635181Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '637'
+      - '566'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:13:53 GMT
+      - Sun, 08 Oct 2023 03:42:11 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1241,30 +1321,27 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/da470fc1-9183-4c8d-a546-ad7c13224515","name":"da470fc1-9183-4c8d-a546-ad7c13224515","status":"Succeeded","startTime":"2023-10-08T03:37:08.635181Z","endTime":"2023-10-08T03:42:12.9966669Z","percentComplete":100.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","action":"CREATE"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '637'
+      - '577'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:14:25 GMT
+      - Sun, 08 Oct 2023 03:42:41 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1295,410 +1372,29 @@ interactions:
       - --resource-group --account-name --pool-name --volume-name -l --service-level
         --usage-threshold --creation-token --subnet-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '637'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:14:57 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles volume create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - --resource-group --account-name --pool-name --volume-name -l --service-level
-        --usage-threshold --creation-token --subnet-id
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '637'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:15:29 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles volume create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - --resource-group --account-name --pool-name --volume-name -l --service-level
-        --usage-threshold --creation-token --subnet-id
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '637'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:16:00 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles volume create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - --resource-group --account-name --pool-name --volume-name -l --service-level
-        --usage-threshold --creation-token --subnet-id
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '637'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:16:32 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles volume create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - --resource-group --account-name --pool-name --volume-name -l --service-level
-        --usage-threshold --creation-token --subnet-id
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '637'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:17:03 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles volume create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - --resource-group --account-name --pool-name --volume-name -l --service-level
-        --usage-threshold --creation-token --subnet-id
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Creating","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"0001-01-01T00:00:00Z","percentComplete":0.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '637'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:17:34 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles volume create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - --resource-group --account-name --pool-name --volume-name -l --service-level
-        --usage-threshold --creation-token --subnet-id
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
-    method: GET
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49?api-version=2019-05-01
-  response:
-    body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/providers/Microsoft.NetApp/locations/eastus2/operationResults/3638f117-2c75-48c6-b5ab-f6e0b3627f49","name":"3638f117-2c75-48c6-b5ab-f6e0b3627f49","status":"Succeeded","startTime":"2019-06-21T09:10:37.8291958Z","endTime":"2019-06-21T09:18:03.472047Z","percentComplete":100.0,"properties":{"resourceName":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004"}}'
-    headers:
-      access-control-expose-headers:
-      - Request-Context
-      cache-control:
-      - no-cache
-      content-length:
-      - '647'
-      content-type:
-      - application/json; charset=utf-8
-      date:
-      - Fri, 21 Jun 2019 09:18:07 GMT
-      expires:
-      - '-1'
-      pragma:
-      - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
-      server:
-      - Microsoft-IIS/10.0
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      transfer-encoding:
-      - chunked
-      vary:
-      - Accept-Encoding
-      x-content-type-options:
-      - nosniff
-      x-powered-by:
-      - ASP.NET
-    status:
-      code: 200
-      message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - netappfiles volume create
-      Connection:
-      - keep-alive
-      ParameterSetName:
-      - --resource-group --account-name --pool-name --volume-name -l --service-level
-        --usage-threshold --creation-token --subnet-id
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes","etag":"W/\"datetime''2019-06-21T09%3A18%3A03.5099282Z''\"","location":"eastus2","properties":{"provisioningState":"Succeeded","fileSystemId":"5ce356d9-47a8-f978-1d43-275d86fdc641","name":"cli-vol-000004","serviceLevel":"Premium","creationToken":"cli-vol-000004","ownerId":"b6363a81-9022-11e9-9b70-122d2265304e","usageThreshold":107374182400,"usedBytes":0,"snapshotPolicy":{"enabled":false},"exportPolicy":{"rules":[{"ruleIndex":1,"unixReadOnly":false,"unixReadWrite":true,"cifs":false,"nfsv3":true,"nfsv4":false,"allowedClients":"0.0.0.0/0"}]},"protocolTypes":["NFSv3"],"baremetalTenantId":"baremetalTenant_svm_b6363a81902211e99b70122d2265304e_4f58d25d","subnetId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02","mountTargets":[{"provisioningState":"Succeeded","mountTargetId":"631a017f-d38e-8e69-3f09-151620639b74","fileSystemId":"5ce356d9-47a8-f978-1d43-275d86fdc641","startIp":"10.5.0.8","endIp":"10.5.0.8","gateway":"10.5.0.1","netmask":"255.255.255.0","ipAddress":"10.5.0.8"}]}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes","etag":"W/\"datetime''2023-10-08T03%3A42%3A12.9795711Z''\"","location":"eastus2","properties":{"mountTargets":[{"provisioningState":"Succeeded","mountTargetId":"2f7a1969-42d3-08d9-6b0f-59bc049db42b","fileSystemId":"2f7a1969-42d3-08d9-6b0f-59bc049db42b","startIp":"10.5.0.4","endIp":"10.5.0.4","gateway":"","netmask":"","subnet":"","ipAddress":"10.5.0.4"}],"fileSystemId":"2f7a1969-42d3-08d9-6b0f-59bc049db42b","serviceLevel":"Premium","creationToken":"cli-vol-000004","usageThreshold":107374182400,"usedBytes":0,"exportPolicy":{"rules":[{"ruleIndex":1,"unixReadOnly":false,"unixReadWrite":true,"cifs":false,"nfsv3":true,"nfsv4":false,"allowedClients":"0.0.0.0/0"}]},"protocolTypes":["NFSv3"],"baremetalTenantId":"baremetalTenant_svm_e235ea99eec511eaa3d25ab5998f871c_ef33588a","subnetId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.Network/virtualNetworks/cli-vnet-000007/subnets/subnet02","snapshotDirectoryVisible":true,"provisioningState":"Succeeded"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '1623'
+      - '1333'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:18:09 GMT
+      - Sun, 08 Oct 2023 03:42:41 GMT
       etag:
-      - W/"datetime'2019-06-21T09%3A18%3A03.5099282Z'"
+      - W/"datetime'2023-10-08T03%3A42%3A12.9795711Z'"
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1715,8 +1411,7 @@ interactions:
       code: 200
       message: OK
 - request:
-    body: !!python/unicode '{"properties": {"fileSystemId": "5ce356d9-47a8-f978-1d43-275d86fdc641"},
-      "location": "eastus2"}'
+    body: '{"location": "eastus2", "properties": {"fileSystemId": "2f7a1969-42d3-08d9-6b0f-59bc049db42b"}}'
     headers:
       Accept:
       - application/json
@@ -1733,33 +1428,30 @@ interactions:
       ParameterSetName:
       - -g -a -p -v -s -l --file-system-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
       accept-language:
       - en-US
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000005?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000005","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000005","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","etag":"6/21/2019
-        9:18:17 AM","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"e98167d9-ad9a-d9a9-55db-eb3efdb43a69","fileSystemId":"5ce356d9-47a8-f978-1d43-275d86fdc641","name":"cli-sn-000005","created":"2019-06-21T09:18:15Z"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000005","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000005","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","etag":"10/8/2023
+        3:42:45 AM","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"4c6597ff-6d81-3f90-73c5-1b1f868bfb26","fileSystemId":"2f7a1969-42d3-08d9-6b0f-59bc049db42b","created":"2023-10-08T03:42:43.439Z"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '778'
+      - '609'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:18:17 GMT
+      - Sun, 08 Oct 2023 03:42:45 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1774,8 +1466,7 @@ interactions:
       code: 201
       message: Created
 - request:
-    body: !!python/unicode '{"properties": {"fileSystemId": "5ce356d9-47a8-f978-1d43-275d86fdc641"},
-      "location": "eastus2"}'
+    body: '{"location": "eastus2", "properties": {"fileSystemId": "2f7a1969-42d3-08d9-6b0f-59bc049db42b"}}'
     headers:
       Accept:
       - application/json
@@ -1792,33 +1483,30 @@ interactions:
       ParameterSetName:
       - -g -a -p -v -s -l --file-system-id
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
       accept-language:
       - en-US
     method: PUT
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000006?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000006","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000006","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","etag":"6/21/2019
-        9:18:26 AM","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"9f09119d-e5f0-502c-959c-ee8b4e41dfcb","fileSystemId":"5ce356d9-47a8-f978-1d43-275d86fdc641","name":"cli-sn-000006","created":"2019-06-21T09:18:24Z"}}'
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000006","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000006","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","etag":"10/8/2023
+        3:42:48 AM","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"3c16a8aa-6c4d-44b2-687a-32f6710bf6d8","fileSystemId":"2f7a1969-42d3-08d9-6b0f-59bc049db42b","created":"2023-10-08T03:42:46.546Z"}}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '778'
+      - '609'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:18:27 GMT
+      - Sun, 08 Oct 2023 03:42:48 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1826,7 +1514,7 @@ interactions:
       x-content-type-options:
       - nosniff
       x-ms-ratelimit-remaining-subscription-writes:
-      - '1196'
+      - '1198'
       x-powered-by:
       - ASP.NET
     status:
@@ -1846,32 +1534,29 @@ interactions:
       ParameterSetName:
       - -g -a -p -v
       User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        azure-mgmt-netapp/0.4.0 Azure-SDK-For-Python AZURECLI/2.0.67
+      - python/3.10.13 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31) msrest/0.7.1
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0 msrest_azure/0.6.4 azure-mgmt-netapp/0.4.0
+        Azure-SDK-For-Python AZURECLI/2.53.0
       accept-language:
       - en-US
     method: GET
     uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots?api-version=2019-05-01
   response:
     body:
-      string: !!python/unicode '{"value":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000005","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000005","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"e98167d9-ad9a-d9a9-55db-eb3efdb43a69","fileSystemId":"5ce356d9-47a8-f978-1d43-275d86fdc641","name":"cli-sn-000005","created":"2019-06-21T09:18:15Z"}},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000006","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000006","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"9f09119d-e5f0-502c-959c-ee8b4e41dfcb","fileSystemId":"5ce356d9-47a8-f978-1d43-275d86fdc641","name":"cli-sn-000006","created":"2019-06-21T09:18:24Z"}}]}'
+      string: '{"value":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000005","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000005","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"4c6597ff-6d81-3f90-73c5-1b1f868bfb26","fileSystemId":"2f7a1969-42d3-08d9-6b0f-59bc049db42b","created":"2023-10-08T03:42:43.439Z"}},{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/clitest.rg000001/providers/Microsoft.NetApp/netAppAccounts/cli-acc-000002/capacityPools/cli-pool-000003/volumes/cli-vol-000004/snapshots/cli-sn-000006","name":"cli-acc-000002/cli-pool-000003/cli-vol-000004/cli-sn-000006","type":"Microsoft.NetApp/netAppAccounts/capacityPools/volumes/snapshots","location":"eastus2","properties":{"provisioningState":"Succeeded","snapshotId":"3c16a8aa-6c4d-44b2-687a-32f6710bf6d8","fileSystemId":"2f7a1969-42d3-08d9-6b0f-59bc049db42b","created":"2023-10-08T03:42:46.546Z"}}]}'
     headers:
-      access-control-expose-headers:
-      - Request-Context
       cache-control:
       - no-cache
       content-length:
-      - '1509'
+      - '1171'
       content-type:
       - application/json; charset=utf-8
       date:
-      - Fri, 21 Jun 2019 09:18:30 GMT
+      - Sun, 08 Oct 2023 03:42:48 GMT
       expires:
       - '-1'
       pragma:
       - no-cache
-      request-context:
-      - appId=cid-v1:2c4cb680-0a1f-424d-bb8d-8e650ba68d53
       server:
       - Microsoft-IIS/10.0
       strict-transport-security:
@@ -1887,51 +1572,4 @@ interactions:
     status:
       code: 200
       message: OK
-- request:
-    body: null
-    headers:
-      Accept:
-      - application/json
-      Accept-Encoding:
-      - gzip, deflate
-      CommandName:
-      - group delete
-      Connection:
-      - keep-alive
-      Content-Length:
-      - '0'
-      ParameterSetName:
-      - --name --yes --no-wait
-      User-Agent:
-      - python/2.7.10 (Darwin-16.7.0-x86_64-i386-64bit) msrest/0.6.7 msrest_azure/0.6.1
-        resourcemanagementclient/2.1.0 Azure-SDK-For-Python AZURECLI/2.0.67
-      accept-language:
-      - en-US
-    method: DELETE
-    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/clitest.rg000001?api-version=2018-05-01
-  response:
-    body:
-      string: !!python/unicode ''
-    headers:
-      cache-control:
-      - no-cache
-      content-length:
-      - '0'
-      date:
-      - Fri, 21 Jun 2019 09:18:35 GMT
-      expires:
-      - '-1'
-      location:
-      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/operationresults/eyJqb2JJZCI6IlJFU09VUkNFR1JPVVBERUxFVElPTkpPQi1DTElURVNUOjJFUkcyTkJXTVgzVE5CTkZZVTZOWkxEVFJJN05aUkpXT002UEZTTnwxNUI0RDBGNTEyNzg0MTQ5LVdFU1RVUyIsImpvYkxvY2F0aW9uIjoid2VzdHVzIn0?api-version=2018-05-01
-      pragma:
-      - no-cache
-      strict-transport-security:
-      - max-age=31536000; includeSubDomains
-      x-content-type-options:
-      - nosniff
-      x-ms-ratelimit-remaining-subscription-deletes:
-      - '14999'
-    status:
-      code: 202
-      message: Accepted
 version: 1
