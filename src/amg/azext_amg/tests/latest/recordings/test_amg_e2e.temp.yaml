@@ -1,0 +1,59 @@
+interactions:
+- request:
+    body: '{"sku": {"name": "Standard"}, "properties": {}, "identity": {"type": "SystemAssigned"},
+      "tags": {"foo": "doo"}, "location": "westeurope"}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - grafana create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '137'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -g -n -l --tags
+      User-Agent:
+      - AZURECLI/2.53.0 azsdk-python-mgmt-dashboard/1.0.0b1 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_amg000001/providers/Microsoft.Dashboard/grafana/clitestamge2e?api-version=2022-10-01-preview
+  response:
+    body:
+      string: '{"error":{"code":"NameNotUnique","message":"The Grafana Workspace name
+        ''clitestamge2e'' is already being used. Please choose another name."}}'
+    headers:
+      api-supported-versions:
+      - 2021-09-01-preview, 2022-05-01-preview, 2022-08-01, 2022-10-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '140'
+      content-type:
+      - application/json
+      date:
+      - Mon, 09 Oct 2023 03:23:48 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:c5d15200-b714-40a5-9a7a-a4ecac3e5442
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-failure-cause:
+      - gateway
+      x-ms-providerhub-traffic:
+      - 'True'
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+    status:
+      code: 400
+      message: Bad Request
+version: 1
