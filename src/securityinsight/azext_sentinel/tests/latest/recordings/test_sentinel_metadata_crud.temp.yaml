@@ -1,0 +1,716 @@
+interactions:
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - monitor log-analytics workspace create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - AZURECLI/2.53.0 azsdk-python-azure-mgmt-resource/23.1.0b2 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_sentinel_000001?api-version=2022-09-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001","name":"cli_test_sentinel_000001","type":"Microsoft.Resources/resourceGroups","location":"eastus2","tags":{"product":"azurecli","cause":"automation","test":"test_sentinel_metadata_crud","date":"2023-10-09T02:52:52Z","module":"securityinsight"},"properties":{"provisioningState":"Succeeded"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '391'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:52:52 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "eastus2", "properties": {"retentionInDays": 30, "sku": {"name":
+      "PerGB2018"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - monitor log-analytics workspace create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '92'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002?api-version=2021-12-01-preview
+  response:
+    body:
+      string: '{"properties":{"customerId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0","provisioningState":"Creating","sku":{"name":"PerGB2018","lastSkuUpdate":"2023-10-09T02:52:55.0314206Z"},"retentionInDays":30,"features":{"legacy":0,"searchVersion":1,"enableLogAccessUsingOnlyResourcePermissions":true},"workspaceCapping":{"dailyQuotaGb":-1.0,"quotaNextResetTime":"2023-10-10T01:00:00Z","dataIngestionStatus":"RespectQuota"},"publicNetworkAccessForIngestion":"Enabled","publicNetworkAccessForQuery":"Enabled","createdDate":"2023-10-09T02:52:55.0314206Z","modifiedDate":"2023-10-09T02:52:55.0314206Z"},"location":"eastus2","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002","name":"workspace-000002","type":"Microsoft.OperationalInsights/workspaces"}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      api-supported-versions:
+      - 2021-12-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:52:54 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002?api-version=2021-12-01-preview
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:e6336c63-aab2-45f0-996a-e5dbab2a1508
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - monitor log-analytics workspace create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002?api-version=2021-12-01-preview
+  response:
+    body:
+      string: '{"properties":{"customerId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0","provisioningState":"Creating","sku":{"name":"PerGB2018","lastSkuUpdate":"2023-10-09T02:52:55.0314206Z"},"retentionInDays":30,"features":{"legacy":0,"searchVersion":1,"enableLogAccessUsingOnlyResourcePermissions":true},"workspaceCapping":{"dailyQuotaGb":-1.0,"quotaNextResetTime":"2023-10-10T01:00:00Z","dataIngestionStatus":"RespectQuota"},"publicNetworkAccessForIngestion":"Enabled","publicNetworkAccessForQuery":"Enabled","createdDate":"2023-10-09T02:52:55.0314206Z","modifiedDate":"2023-10-09T02:52:55.0314206Z"},"location":"eastus2","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002","name":"workspace-000002","type":"Microsoft.OperationalInsights/workspaces"}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      api-supported-versions:
+      - 2021-12-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:52:54 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:e6336c63-aab2-45f0-996a-e5dbab2a1508
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - monitor log-analytics solution create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -t -w -g
+      User-Agent:
+      - AZURECLI/2.53.0 azsdk-python-azure-mgmt-resource/23.1.0b2 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_sentinel_000001?api-version=2022-09-01
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001","name":"cli_test_sentinel_000001","type":"Microsoft.Resources/resourceGroups","location":"eastus2","tags":{"product":"azurecli","cause":"automation","test":"test_sentinel_metadata_crud","date":"2023-10-09T02:52:52Z","module":"securityinsight"},"properties":{"provisioningState":"Succeeded"}}'
+    headers:
+      cache-control:
+      - no-cache
+      connection:
+      - close
+      content-length:
+      - '391'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:52:54 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - monitor log-analytics solution create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -t -w -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002?api-version=2022-10-01
+  response:
+    body:
+      string: '{"properties":{"customerId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0","provisioningState":"Creating","sku":{"name":"PerGB2018","lastSkuUpdate":"2023-10-09T02:52:55.0314206Z"},"retentionInDays":30,"features":{"legacy":0,"searchVersion":1,"enableLogAccessUsingOnlyResourcePermissions":true},"workspaceCapping":{"dailyQuotaGb":-1.0,"quotaNextResetTime":"2023-10-10T01:00:00Z","dataIngestionStatus":"RespectQuota"},"publicNetworkAccessForIngestion":"Enabled","publicNetworkAccessForQuery":"Enabled","createdDate":"2023-10-09T02:52:55.0314206Z","modifiedDate":"2023-10-09T02:52:55.0314206Z"},"location":"eastus2","id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002","name":"workspace-000002","type":"Microsoft.OperationalInsights/workspaces"}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      api-supported-versions:
+      - 2015-03-20, 2020-08-01, 2020-10-01, 2021-06-01, 2022-10-01
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:52:54 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:e6336c63-aab2-45f0-996a-e5dbab2a1508
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"location": "eastus2", "plan": {"name": "SecurityInsights", "product":
+      "OMSGallery/SecurityInsights", "promotionCode": "", "publisher": "Microsoft"},
+      "properties": {"workspaceResourceId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - monitor log-analytics solution create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '352'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -t -w -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourcegroups/cli_test_sentinel_000001/providers/Microsoft.OperationsManagement/solutions/SecurityInsights%28workspace-000002%29?api-version=2015-11-01-preview
+  response:
+    body:
+      string: '{"plan":{"name":"SecurityInsights(workspace-000002)","publisher":"Microsoft","promotionCode":"","product":"OMSGallery/SecurityInsights"},"properties":{"workspaceResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002","provisioningState":"Succeeded","creationTime":"Mon,
+        09 Oct 2023 02:52:57 GMT","sku":{"name":"Unified"},"lastModifiedTime":"Mon,
+        09 Oct 2023 02:52:57 GMT","containedResources":[],"workbookTemplates":[]},"location":"eastus2","tags":{},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationsManagement/solutions/SecurityInsights(workspace-000002)","name":"SecurityInsights(workspace-000002)","type":"Microsoft.OperationsManagement/solutions"}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      api-supported-versions:
+      - 2015-11-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:52:57 GMT
+      expires:
+      - '-1'
+      location:
+      - https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationsManagement/solutions/SecurityInsights(workspace-000002)?api-version=2015-11-01-preview
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:e6336c63-aab2-45f0-996a-e5dbab2a1508
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1199'
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - monitor log-analytics solution create
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -t -w -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationsManagement/solutions/SecurityInsights(workspace-000002)?api-version=2015-11-01-preview
+  response:
+    body:
+      string: '{"plan":{"name":"SecurityInsights(workspace-000002)","publisher":"Microsoft","promotionCode":"","product":"OMSGallery/SecurityInsights"},"properties":{"workspaceResourceId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002","provisioningState":"Succeeded","creationTime":"Mon,
+        09 Oct 2023 02:52:57 GMT","sku":{"name":"Unified"},"lastModifiedTime":"Mon,
+        09 Oct 2023 02:52:57 GMT","containedResources":[],"workbookTemplates":[]},"location":"eastus2","tags":{},"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationsManagement/solutions/SecurityInsights(workspace-000002)","name":"SecurityInsights(workspace-000002)","type":"Microsoft.OperationsManagement/solutions"}'
+    headers:
+      access-control-allow-origin:
+      - '*'
+      api-supported-versions:
+      - 2015-11-01-preview
+      cache-control:
+      - no-cache
+      content-length:
+      - '848'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:52:57 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      request-context:
+      - appId=cid-v1:e6336c63-aab2-45f0-996a-e5dbab2a1508
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-powered-by:
+      - ASP.NET
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"kind": "MicrosoftSecurityIncidentCreation", "properties": {"displayName":
+      "testing", "enabled": true, "productFilter": "Microsoft Cloud App Security"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - sentinel alert-rule create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '153'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -n -w -g --ms-security-incident
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003?api-version=2022-06-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003","name":"alert-rule-000003","etag":"\"45009ebc-0000-0100-0000-65236b0d0000\"","type":"Microsoft.SecurityInsights/alertRules","kind":"MicrosoftSecurityIncidentCreation","properties":{"productFilter":"Microsoft
+        Cloud App Security","severitiesFilter":null,"displayNamesFilter":null,"displayNamesExcludeFilter":null,"displayName":"testing","enabled":true,"description":null,"alertRuleTemplateName":null,"lastModifiedUtc":"2023-10-09T02:53:01.077656Z"}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '681'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:53:00 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: '{"properties": {"contentId": "c00ee137-7475-47c8-9cce-ec6f0f1bedd0", "kind":
+      "AnalyticsRule", "parentId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003"}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - sentinel metadata create
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '335'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -n -w -g --content-id --parent-id --kind
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004?api-version=2022-06-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004","name":"metadata-000004","type":"Microsoft.SecurityInsights/metadata","systemData":{"createdAt":"2023-10-09T02:53:01.2702134Z","createdBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","createdByType":"User","lastModifiedAt":"2023-10-09T02:53:01.2702134Z","lastModifiedBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","lastModifiedByType":"User"},"properties":{"contentId":"c00ee137-7475-47c8-9cce-ec6f0f1bedd0","parentId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003","kind":"AnalyticsRule","source":{"kind":"LocalWorkspace","name":"workspace-000002","sourceId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0"}}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1021'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:53:00 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1197'
+    status:
+      code: 201
+      message: Created
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - sentinel metadata list
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -w -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata?api-version=2022-06-01-preview
+  response:
+    body:
+      string: '{"value":[{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004","name":"metadata-000004","type":"Microsoft.SecurityInsights/metadata","systemData":{"createdAt":"2023-10-09T02:53:01.2702134Z","createdBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","createdByType":"User","lastModifiedAt":"2023-10-09T02:53:01.2702134Z","lastModifiedBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","lastModifiedByType":"User"},"properties":{"contentId":"c00ee137-7475-47c8-9cce-ec6f0f1bedd0","parentId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003","kind":"AnalyticsRule","source":{"kind":"LocalWorkspace","name":"workspace-000002","sourceId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0"}}}]}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1033'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:53:01 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - sentinel metadata update
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -w -g --author
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004?api-version=2022-06-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004","name":"metadata-000004","type":"Microsoft.SecurityInsights/metadata","systemData":{"createdAt":"2023-10-09T02:53:01.2702134Z","createdBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","createdByType":"User","lastModifiedAt":"2023-10-09T02:53:01.2702134Z","lastModifiedBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","lastModifiedByType":"User"},"properties":{"contentId":"c00ee137-7475-47c8-9cce-ec6f0f1bedd0","parentId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003","kind":"AnalyticsRule","source":{"kind":"LocalWorkspace","name":"workspace-000002","sourceId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0"}}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1021'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:53:00 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: '{"properties": {"author": {"email": "cli@microsoft.com", "name": "cli"},
+      "contentId": "c00ee137-7475-47c8-9cce-ec6f0f1bedd0", "kind": "AnalyticsRule",
+      "parentId": "/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003",
+      "source": {"kind": "LocalWorkspace", "name": "workspace-000002", "sourceId":
+      "d6e1788e-81bb-4bdf-9233-f174eac2c9d0"}}}'
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - sentinel metadata update
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '510'
+      Content-Type:
+      - application/json
+      ParameterSetName:
+      - -n -w -g --author
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: PUT
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004?api-version=2022-06-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004","name":"metadata-000004","type":"Microsoft.SecurityInsights/metadata","systemData":{"createdAt":"2023-10-09T02:53:01.2702134Z","createdBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","createdByType":"User","lastModifiedAt":"2023-10-09T02:53:01.9508395Z","lastModifiedBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","lastModifiedByType":"User"},"properties":{"contentId":"c00ee137-7475-47c8-9cce-ec6f0f1bedd0","parentId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003","kind":"AnalyticsRule","source":{"kind":"LocalWorkspace","name":"workspace-000002","sourceId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0"},"author":{"name":"cli","email":"cli@microsoft.com"}}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1073'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:53:01 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-writes:
+      - '1198'
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - sentinel metadata show
+      Connection:
+      - keep-alive
+      ParameterSetName:
+      - -n -w -g
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: GET
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004?api-version=2022-06-01-preview
+  response:
+    body:
+      string: '{"id":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004","name":"metadata-000004","type":"Microsoft.SecurityInsights/metadata","systemData":{"createdAt":"2023-10-09T02:53:01.2702134Z","createdBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","createdByType":"User","lastModifiedAt":"2023-10-09T02:53:01.9508395Z","lastModifiedBy":"azureclilivetest@azuresdkteam.onmicrosoft.com","lastModifiedByType":"User"},"properties":{"contentId":"c00ee137-7475-47c8-9cce-ec6f0f1bedd0","parentId":"/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/alertRules/alert-rule-000003","kind":"AnalyticsRule","source":{"kind":"LocalWorkspace","name":"workspace-000002","sourceId":"d6e1788e-81bb-4bdf-9233-f174eac2c9d0"},"author":{"name":"cli","email":"cli@microsoft.com"}}}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '1073'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:53:02 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+    status:
+      code: 200
+      message: OK
+- request:
+    body: null
+    headers:
+      Accept:
+      - '*/*'
+      Accept-Encoding:
+      - gzip, deflate
+      CommandName:
+      - sentinel metadata delete
+      Connection:
+      - keep-alive
+      Content-Length:
+      - '0'
+      ParameterSetName:
+      - -n -w -g --yes
+      User-Agent:
+      - AZURECLI/2.53.0 (AAZ) azsdk-python-core/1.26.0 Python/3.11.5 (Linux-5.15.0-1047-azure-x86_64-with-glibc2.31)
+        VSTS_7b238909-6802-4b65-b90d-184bca47f458_build_261_0
+    method: DELETE
+    uri: https://management.azure.com/subscriptions/00000000-0000-0000-0000-000000000000/resourceGroups/cli_test_sentinel_000001/providers/Microsoft.OperationalInsights/workspaces/workspace-000002/providers/Microsoft.SecurityInsights/metadata/metadata-000004?api-version=2022-06-01-preview
+  response:
+    body:
+      string: '{}'
+    headers:
+      cache-control:
+      - no-cache
+      content-length:
+      - '2'
+      content-type:
+      - application/json; charset=utf-8
+      date:
+      - Mon, 09 Oct 2023 02:53:02 GMT
+      expires:
+      - '-1'
+      pragma:
+      - no-cache
+      server:
+      - Kestrel
+      strict-transport-security:
+      - max-age=31536000; includeSubDomains
+      transfer-encoding:
+      - chunked
+      vary:
+      - Accept-Encoding
+      x-content-type-options:
+      - nosniff
+      x-ms-ratelimit-remaining-subscription-deletes:
+      - '14999'
+    status:
+      code: 200
+      message: OK
+version: 1
